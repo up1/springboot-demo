@@ -50,6 +50,7 @@ repositories {
 dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile 'org.springframework.boot:spring-boot-starter-mail'
+	compile 'org.aspectj:aspectjweaver:1.8.10'
 	compile 'com.google.guava:guava:21.0'
 
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
