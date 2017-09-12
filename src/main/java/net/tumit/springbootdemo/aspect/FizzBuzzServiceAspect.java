@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.springframework.core.style.ToStringCreator;
+import org.springframework.core.style.ValueStyler;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StopWatch;
 
@@ -13,8 +15,7 @@ import org.springframework.util.StopWatch;
 public class FizzBuzzServiceAspect {
 
 	@Around("execution(* net.tumit.springbootdemo.service.FizzBuzzService.say())")
-	public Object aroundSampleCreation(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-
+	public Object aroundSay(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 		StopWatch watch = new StopWatch();
 		try {
 			watch.start();
