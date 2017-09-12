@@ -39,8 +39,8 @@ public class SigninController {
 
 	@PostMapping(value = "/signin")
 	public ResponseEntity<MessageResult> signin(
-			@RequestParam(value = "username", defaultValue = "") String username,
-			@RequestParam(value = "password", defaultValue = "") String password) {
+			@RequestParam(value = "username", defaultValue = "") final String username,
+			@RequestParam(value = "password", defaultValue = "") final String password) {
 
 		MessageResult signInResult = null;
 		try {

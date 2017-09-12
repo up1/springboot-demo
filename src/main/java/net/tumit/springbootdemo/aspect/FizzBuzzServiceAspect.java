@@ -15,7 +15,7 @@ import org.springframework.util.StopWatch;
 public class FizzBuzzServiceAspect {
 
 	@Around("execution(* net.tumit.springbootdemo.service.FizzBuzzService.say())")
-	public Object aroundSay(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+	public Object aroundSay(final ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 		StopWatch watch = new StopWatch();
 		try {
 			watch.start();
